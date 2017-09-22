@@ -58,7 +58,7 @@ public class StudentController {
 	//nomor 2
 	@RequestMapping("/student/delete/{npm}")
 	public String delete(@PathVariable Optional<String> npm, Model model) {
-		StudentModel students = studentService.selectStudent(npm.get());
+		StudentModel students = studentService.selectStudent(npm.get()); 
 		if (students == null){
 			return "deleteFailed";
 		} else {
